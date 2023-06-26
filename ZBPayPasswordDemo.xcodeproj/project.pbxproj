@@ -8,20 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		3913801D2A499B0500673177 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3913801C2A499B0500673177 /* AppDelegate.m */; };
-		391380202A499B0500673177 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3913801F2A499B0500673177 /* SceneDelegate.m */; };
 		391380232A499B0500673177 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 391380222A499B0500673177 /* ViewController.m */; };
 		391380262A499B0500673177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391380242A499B0500673177 /* Main.storyboard */; };
 		391380282A499B0700673177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 391380272A499B0700673177 /* Assets.xcassets */; };
 		3913802B2A499B0700673177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391380292A499B0700673177 /* LaunchScreen.storyboard */; };
 		3913802E2A499B0700673177 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3913802D2A499B0700673177 /* main.m */; };
+		391380372A499C2900673177 /* ZBPayPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 391380362A499C2900673177 /* ZBPayPopupView.m */; };
+		3913803A2A499C3E00673177 /* ZBPayPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 391380392A499C3E00673177 /* ZBPayPasswordView.m */; };
+		391380592A499CE600673177 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3913803D2A499CE600673177 /* LICENSE */; };
+		3913805A2A499CE600673177 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 391380402A499CE600673177 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		3913805B2A499CE600673177 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 391380492A499CE600673177 /* ViewController+MASAdditions.m */; };
+		3913805C2A499CE600673177 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3913804D2A499CE600673177 /* MASCompositeConstraint.m */; };
+		3913805D2A499CE600673177 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3913804E2A499CE600673177 /* MASConstraintMaker.m */; };
+		3913805E2A499CE600673177 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3913804F2A499CE600673177 /* MASLayoutConstraint.m */; };
+		3913805F2A499CE600673177 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 391380502A499CE600673177 /* NSArray+MASAdditions.m */; };
+		391380602A499CE600673177 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 391380512A499CE600673177 /* View+MASAdditions.m */; };
+		391380612A499CE600673177 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 391380542A499CE600673177 /* MASConstraint.m */; };
+		391380622A499CE600673177 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 391380562A499CE600673177 /* MASViewConstraint.m */; };
+		391380632A499CE600673177 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 391380572A499CE600673177 /* MASViewAttribute.m */; };
+		391380642A499CE600673177 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 391380582A499CE600673177 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		391380182A499B0500673177 /* ZBPayPasswordDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBPayPasswordDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3913801B2A499B0500673177 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3913801C2A499B0500673177 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3913801E2A499B0500673177 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		3913801F2A499B0500673177 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		391380212A499B0500673177 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		391380222A499B0500673177 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		391380252A499B0500673177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,6 +40,38 @@
 		3913802A2A499B0700673177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3913802C2A499B0700673177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3913802D2A499B0700673177 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		391380352A499C2900673177 /* ZBPayPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBPayPopupView.h; sourceTree = "<group>"; };
+		391380362A499C2900673177 /* ZBPayPopupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBPayPopupView.m; sourceTree = "<group>"; };
+		391380382A499C3E00673177 /* ZBPayPasswordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBPayPasswordView.h; sourceTree = "<group>"; };
+		391380392A499C3E00673177 /* ZBPayPasswordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBPayPasswordView.m; sourceTree = "<group>"; };
+		3913803B2A499CB000673177 /* ZBPayHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBPayHeader.h; sourceTree = "<group>"; };
+		3913803D2A499CE600673177 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3913803F2A499CE600673177 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		391380402A499CE600673177 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		391380412A499CE600673177 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		391380422A499CE600673177 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		391380432A499CE600673177 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		391380442A499CE600673177 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		391380452A499CE600673177 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		391380462A499CE600673177 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		391380472A499CE600673177 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		391380482A499CE600673177 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		391380492A499CE600673177 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		3913804A2A499CE600673177 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		3913804B2A499CE600673177 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		3913804C2A499CE600673177 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		3913804D2A499CE600673177 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		3913804E2A499CE600673177 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		3913804F2A499CE600673177 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		391380502A499CE600673177 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		391380512A499CE600673177 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		391380522A499CE600673177 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		391380532A499CE600673177 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		391380542A499CE600673177 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		391380552A499CE600673177 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		391380562A499CE600673177 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		391380572A499CE600673177 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		391380582A499CE600673177 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +104,9 @@
 		3913801A2A499B0500673177 /* ZBPayPasswordDemo */ = {
 			isa = PBXGroup;
 			children = (
+				391380342A499BCE00673177 /* ZBPayPassword */,
 				3913801B2A499B0500673177 /* AppDelegate.h */,
 				3913801C2A499B0500673177 /* AppDelegate.m */,
-				3913801E2A499B0500673177 /* SceneDelegate.h */,
-				3913801F2A499B0500673177 /* SceneDelegate.m */,
 				391380212A499B0500673177 /* ViewController.h */,
 				391380222A499B0500673177 /* ViewController.m */,
 				391380242A499B0500673177 /* Main.storyboard */,
@@ -72,8 +114,63 @@
 				391380292A499B0700673177 /* LaunchScreen.storyboard */,
 				3913802C2A499B0700673177 /* Info.plist */,
 				3913802D2A499B0700673177 /* main.m */,
+				3913803C2A499CE600673177 /* Masonry */,
 			);
 			path = ZBPayPasswordDemo;
+			sourceTree = "<group>";
+		};
+		391380342A499BCE00673177 /* ZBPayPassword */ = {
+			isa = PBXGroup;
+			children = (
+				391380382A499C3E00673177 /* ZBPayPasswordView.h */,
+				391380392A499C3E00673177 /* ZBPayPasswordView.m */,
+				391380352A499C2900673177 /* ZBPayPopupView.h */,
+				391380362A499C2900673177 /* ZBPayPopupView.m */,
+				3913803B2A499CB000673177 /* ZBPayHeader.h */,
+			);
+			path = ZBPayPassword;
+			sourceTree = "<group>";
+		};
+		3913803C2A499CE600673177 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				3913803D2A499CE600673177 /* LICENSE */,
+				3913803E2A499CE600673177 /* Masonry */,
+				391380582A499CE600673177 /* README.md */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		3913803E2A499CE600673177 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				3913803F2A499CE600673177 /* MASCompositeConstraint.h */,
+				391380402A499CE600673177 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				391380412A499CE600673177 /* MASConstraint+Private.h */,
+				391380422A499CE600673177 /* MASLayoutConstraint.h */,
+				391380432A499CE600673177 /* NSArray+MASShorthandAdditions.h */,
+				391380442A499CE600673177 /* MASConstraintMaker.h */,
+				391380452A499CE600673177 /* View+MASAdditions.h */,
+				391380462A499CE600673177 /* NSArray+MASAdditions.h */,
+				391380472A499CE600673177 /* MASUtilities.h */,
+				391380482A499CE600673177 /* MASViewAttribute.h */,
+				391380492A499CE600673177 /* ViewController+MASAdditions.m */,
+				3913804A2A499CE600673177 /* MASViewConstraint.h */,
+				3913804B2A499CE600673177 /* MASConstraint.h */,
+				3913804C2A499CE600673177 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				3913804D2A499CE600673177 /* MASCompositeConstraint.m */,
+				3913804E2A499CE600673177 /* MASConstraintMaker.m */,
+				3913804F2A499CE600673177 /* MASLayoutConstraint.m */,
+				391380502A499CE600673177 /* NSArray+MASAdditions.m */,
+				391380512A499CE600673177 /* View+MASAdditions.m */,
+				391380522A499CE600673177 /* View+MASShorthandAdditions.h */,
+				391380532A499CE600673177 /* Masonry.h */,
+				391380542A499CE600673177 /* MASConstraint.m */,
+				391380552A499CE600673177 /* ViewController+MASAdditions.h */,
+				391380562A499CE600673177 /* MASViewConstraint.m */,
+				391380572A499CE600673177 /* MASViewAttribute.m */,
+			);
+			path = Masonry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +232,8 @@
 			files = (
 				3913802B2A499B0700673177 /* LaunchScreen.storyboard in Resources */,
 				391380282A499B0700673177 /* Assets.xcassets in Resources */,
+				391380642A499CE600673177 /* README.md in Resources */,
+				391380592A499CE600673177 /* LICENSE in Resources */,
 				391380262A499B0500673177 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,10 +245,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391380372A499C2900673177 /* ZBPayPopupView.m in Sources */,
 				391380232A499B0500673177 /* ViewController.m in Sources */,
+				3913805E2A499CE600673177 /* MASLayoutConstraint.m in Sources */,
 				3913801D2A499B0500673177 /* AppDelegate.m in Sources */,
+				3913803A2A499C3E00673177 /* ZBPayPasswordView.m in Sources */,
+				391380632A499CE600673177 /* MASViewAttribute.m in Sources */,
+				3913805F2A499CE600673177 /* NSArray+MASAdditions.m in Sources */,
+				3913805C2A499CE600673177 /* MASCompositeConstraint.m in Sources */,
+				3913805D2A499CE600673177 /* MASConstraintMaker.m in Sources */,
+				391380602A499CE600673177 /* View+MASAdditions.m in Sources */,
+				3913805B2A499CE600673177 /* ViewController+MASAdditions.m in Sources */,
 				3913802E2A499B0700673177 /* main.m in Sources */,
-				391380202A499B0500673177 /* SceneDelegate.m in Sources */,
+				391380622A499CE600673177 /* MASViewConstraint.m in Sources */,
+				3913805A2A499CE600673177 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				391380612A499CE600673177 /* MASConstraint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +409,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +436,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
