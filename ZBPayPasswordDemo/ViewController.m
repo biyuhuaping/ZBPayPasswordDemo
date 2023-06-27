@@ -12,7 +12,7 @@
 @interface ViewController ()<ZBPayPopupViewDelegate>
 
 @property (nonatomic, strong) UIButton *button;
-@property(nonatomic, strong) ZBPayPopupView *payView;
+//@property(nonatomic, strong) ZBPayPopupView *payView;
 
 @end
 
@@ -31,9 +31,9 @@
         sender.enabled = YES;
     });
     
-    self.payView = [[ZBPayPopupView alloc]init];
-    self.payView.delegate = self;
-    [self.payView showPayView];
+    ZBPayPopupView *payView = [[ZBPayPopupView alloc]init];
+    payView.delegate = self;
+    [payView showPayView];
 }
 
 #pragma mark - ZBPayPopupViewDelegate
@@ -41,12 +41,12 @@
     NSLog(@"点击了忘记密码");
 }
 
-- (void)didPasswordInputFinished:(NSString *)password {
+- (void)payPopupView:(ZBPayPopupView *)payView didPasswordInputFinished:(NSString *)password {
     if ([password isEqualToString:@"456789"]) {
         NSLog(@"输入的密码正确");
     } else {
         NSLog(@"输入错误:%@",password);
-        [self.payView didInputPayPasswordError];
+        [payView didInputPayPasswordError];
     }
 }
 

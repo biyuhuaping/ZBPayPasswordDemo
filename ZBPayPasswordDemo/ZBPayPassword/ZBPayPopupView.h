@@ -9,11 +9,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class ZBPayPopupView;
 @protocol ZBPayPopupViewDelegate <NSObject>
 
+/// 忘记密码
 - (void)didClickForgetPasswordButton;
 
-- (void)didPasswordInputFinished:(NSString *)password;
+/// 输入结束
+- (void)payPopupView:(ZBPayPopupView *)payView didPasswordInputFinished:(NSString *)password;
 
 @end
 

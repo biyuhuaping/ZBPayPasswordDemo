@@ -178,8 +178,8 @@
         };
         _payPasswordView.completionBlock = ^(NSString *password) {
             __strong typeof(weakSelf) strongSelf = weakSelf;
-            if ([strongSelf.delegate respondsToSelector:@selector(didPasswordInputFinished:)]) {
-                [strongSelf.delegate didPasswordInputFinished:password];
+            if ([strongSelf.delegate respondsToSelector:@selector(payPopupView:didPasswordInputFinished:)]) {
+                [strongSelf.delegate payPopupView:strongSelf didPasswordInputFinished:password];
             }
         };
     }
