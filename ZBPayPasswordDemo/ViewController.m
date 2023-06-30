@@ -8,11 +8,11 @@
 #import "ViewController.h"
 #import "ZBPayHeader.h"
 #import "ZBPayPopupView.h"
+#import "ZBCodeInputView.h"
 
 @interface ViewController ()<ZBPayPopupViewDelegate>
 
 @property (nonatomic, strong) UIButton *button;
-//@property(nonatomic, strong) ZBPayPopupView *payView;
 
 @end
 
@@ -21,6 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    ZBCodeInputView *codeView = [[ZBCodeInputView alloc] init];
+    codeView.length = 6;
+    codeView.frame = CGRectMake(40.0, 100.0, kScreenWidth - 80, 44);
+    codeView.focusColor = [UIColor redColor];
+    [codeView setDidInputCompletionBlock:^(NSString *verifycode) {
+        NSLog(@"输入的验证码是: %@", verifycode);
+    }];
+    [self.view addSubview:codeView];
     [self.view addSubview:self.button];
 }
 

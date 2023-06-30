@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3906417D2A4DAB0300DE7940 /* ZBCodeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3906417C2A4DAB0300DE7940 /* ZBCodeInputView.m */; };
 		3913801D2A499B0500673177 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3913801C2A499B0500673177 /* AppDelegate.m */; };
 		391380232A499B0500673177 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 391380222A499B0500673177 /* ViewController.m */; };
 		391380262A499B0500673177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391380242A499B0500673177 /* Main.storyboard */; };
@@ -30,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3906417B2A4DAB0300DE7940 /* ZBCodeInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBCodeInputView.h; sourceTree = "<group>"; };
+		3906417C2A4DAB0300DE7940 /* ZBCodeInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBCodeInputView.m; sourceTree = "<group>"; };
+		3906417E2A4E686E00DE7940 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		391380182A499B0500673177 /* ZBPayPasswordDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBPayPasswordDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3913801B2A499B0500673177 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3913801C2A499B0500673177 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 				391380292A499B0700673177 /* LaunchScreen.storyboard */,
 				3913802C2A499B0700673177 /* Info.plist */,
 				3913802D2A499B0700673177 /* main.m */,
+				3906417E2A4E686E00DE7940 /* PrefixHeader.pch */,
 				3913803C2A499CE600673177 /* Masonry */,
 			);
 			path = ZBPayPasswordDemo;
@@ -122,6 +127,8 @@
 		391380342A499BCE00673177 /* ZBPayPassword */ = {
 			isa = PBXGroup;
 			children = (
+				3906417B2A4DAB0300DE7940 /* ZBCodeInputView.h */,
+				3906417C2A4DAB0300DE7940 /* ZBCodeInputView.m */,
 				391380382A499C3E00673177 /* ZBPayPasswordView.h */,
 				391380392A499C3E00673177 /* ZBPayPasswordView.m */,
 				391380352A499C2900673177 /* ZBPayPopupView.h */,
@@ -259,6 +266,7 @@
 				3913802E2A499B0700673177 /* main.m in Sources */,
 				391380622A499CE600673177 /* MASViewConstraint.m in Sources */,
 				3913805A2A499CE600673177 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				3906417D2A4DAB0300DE7940 /* ZBCodeInputView.m in Sources */,
 				391380612A499CE600673177 /* MASConstraint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +410,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZBPayPasswordDemo/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZBPayPasswordDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -429,6 +438,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZBPayPasswordDemo/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZBPayPasswordDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
