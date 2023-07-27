@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbf-VQ-Hdu">
+                                <rect key="frame" x="80" y="223" width="233" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GI2-rj-Fgh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="点击显示交易密码输入"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TIW-TF-UQr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwP-d4-xQc">
+                                <rect key="frame" x="24.999999999999993" y="303" width="93.333333333333314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OqH-vI-rOE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="密码解锁"/>
+                                <connections>
+                                    <action selector="button1Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u9L-UJ-BC4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解锁结果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcC-fV-qLj">
+                                <rect key="frame" x="192.33333333333334" y="318.33333333333331" width="65.333333333333343" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SUE-Mx-f5V">
+                                <rect key="frame" x="128.33333333333334" y="312.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MHi-0v-JHI"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dbf-VQ-Hdu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="0ey-S3-glu"/>
+                            <constraint firstItem="Dbf-VQ-Hdu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="164" id="3vg-Pw-MGM"/>
+                            <constraint firstItem="SUE-Mx-f5V" firstAttribute="leading" secondItem="cwP-d4-xQc" secondAttribute="trailing" constant="10" id="8st-dD-zwV"/>
+                            <constraint firstItem="SUE-Mx-f5V" firstAttribute="centerY" secondItem="cwP-d4-xQc" secondAttribute="centerY" id="D6y-ve-JEh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dbf-VQ-Hdu" secondAttribute="trailing" constant="80" id="DI3-JZ-j0S"/>
+                            <constraint firstItem="cwP-d4-xQc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="JB0-vN-bwE"/>
+                            <constraint firstItem="cwP-d4-xQc" firstAttribute="top" secondItem="Dbf-VQ-Hdu" secondAttribute="bottom" constant="30" id="d4Y-7c-EfM"/>
+                            <constraint firstItem="jcC-fV-qLj" firstAttribute="leading" secondItem="SUE-Mx-f5V" secondAttribute="trailing" constant="15" id="euI-ic-huq"/>
+                            <constraint firstItem="jcC-fV-qLj" firstAttribute="centerY" secondItem="cwP-d4-xQc" secondAttribute="centerY" id="q44-eA-SSR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jcC-fV-qLj" secondAttribute="trailing" symbolic="YES" id="tJH-as-CwM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="Dbf-VQ-Hdu" id="bvw-3H-VxG"/>
+                        <outlet property="button1" destination="cwP-d4-xQc" id="O6O-3q-clt"/>
+                        <outlet property="logLab" destination="jcC-fV-qLj" id="qsl-m3-qDa"/>
+                        <outlet property="mySwitch" destination="SUE-Mx-f5V" id="mfs-T9-34F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="120" y="-34"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
