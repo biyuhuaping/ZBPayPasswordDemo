@@ -21,10 +21,22 @@
     return instance;
 }
 
-/**
- 使用canEvaluatePolicy 判断设备支持生物解锁类型
- @return biometryType
- */
+//检测系统是否开启生物解锁权限
+- (BOOL)isOpenAuthentication{
+    LAContext *context = [[LAContext alloc] init];
+    NSError *error;
+    // 检查是否可以进行生物特征识别
+    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+//        NSLog(@"恭喜,生物解锁可以使用! %ld", (long)context.biometryType);
+        return YES;
+    } else {
+        // 没有生物指纹识别功能
+        NSLog(@"设备不支持生物解锁功能,原因:%@",error);
+        return NO;
+    }
+}
+
+/// 使用canEvaluatePolicy 判断设备支持生物解锁类型
 - (NSInteger)checkBiometryType{
     LAContext *context = [[LAContext alloc] init];
     NSError *error;
@@ -50,6 +62,10 @@
     return biometryType;
 }
 
+/// 显示生物解锁
+/// @param describe 弹窗下面的描述
+/// @param show 几次错误后是否需要密码
+/// @param block 回调
 - (void)showAuthIDWithDescribe:(NSString *)describe isShowPw:(BOOL)show block:(ZBAuthIDStateBlock)block {
     if(!describe) {
         if(iPhoneX){
@@ -243,72 +259,5 @@
         });
     }
 }
-
-- (void)fingerVerification {
-    //IOS11之后如果支持faceId也是走同样的逻辑，faceId和TouchId只能选一个
-    LAContext *context = [[LAContext alloc] init];
-    NSError *error = nil;
-    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
-        //支持 localizedReason为alert弹框的message内容
-        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"请验证已有指纹" reply:^(BOOL success, NSError * _Nullable error) {
-            if (success) {
-                NSLog(@"验证通过");
-            } else {
-                NSLog(@"验证失败:%@",error.description);
-                switch (error.code) {
-                    case LAErrorSystemCancel: {
-                        NSLog(@"系统取消授权，如其他APP切入");
-                        //系统取消授权，如其他APP切入
-                        break;
-                    }
-                    case LAErrorUserCancel: {
-                        //用户取消验证Touch ID
-                        NSLog(@"用户取消验证Touch ID");
-                        break;
-                    }
-                    case LAErrorAuthenticationFailed: {
-                        //授权失败
-                        NSLog(@"授权失败");
-                        break;
-                    }
-                    case LAErrorPasscodeNotSet: {
-                        //系统未设置密码
-                        NSLog(@"系统未设置密码");
-                        break;
-                    }
-                    case LAErrorBiometryNotAvailable: {
-                        //设备Touch ID不可用，例如未打开
-                        NSLog(@"设备Touch ID不可用，例如未打开");
-                        break;
-                    }
-                    case LAErrorBiometryNotEnrolled: {
-                        //设备Touch ID不可用，用户未录入
-                        NSLog(@"设备Touch ID不可用，用户未录入");
-                        break;
-                    }
-                    case LAErrorUserFallback: {
-                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                            //用户选择输入密码，切换主线程处理
-                            NSLog(@"用户选择输入密码，切换主线程处理");
-                            
-                        }];
-                        break;
-                    }
-                    default: {
-                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                            //其他情况，切换主线程处理
-                            NSLog(@"其他情况，切换主线程处理");
-                        }];
-                        break;
-                    }
-                }
-            }
-        }];
-    } else {
-        NSLog(@"不支持指纹识别");
-        NSLog(@"error : %@",error.localizedDescription);
-    }
-}
-
 
 @end

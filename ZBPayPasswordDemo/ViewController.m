@@ -25,16 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.mySwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"isUsedAuthID"];
+    [self configLockView];
 }
 
 - (void)configLockView{
-    // 生物识别
     BOOL isAuthID = [[NSUserDefaults standardUserDefaults] boolForKey:@"isUsedAuthID"];
-    if (isAuthID) {//如果开启了生物识别：就优先用生物识别验证
-        [self authIDVerificationSwitchState:isAuthID];
-    }
-    
+    self.mySwitch.on = isAuthID;
+
     //判断设备支持生物解锁类型
     NSInteger biometryType = [[ZBAuthID sharedInstance] checkBiometryType];
     if (!isAuthID) {//如果未开启生物识别，button1：忘记密码
@@ -71,6 +68,11 @@
 - (IBAction)switchChanged:(UISwitch *)sender {
     [[NSUserDefaults standardUserDefaults] setBool:sender.on forKey:@"isUsedAuthID"];
     self.isSwitching = YES;
+    // 生物识别
+    BOOL isAuthID = [[NSUserDefaults standardUserDefaults] boolForKey:@"isUsedAuthID"];
+    if (isAuthID) {//如果开启了生物识别：就优先用生物识别验证
+        [self authIDVerificationSwitchState:isAuthID];
+    }
     [self configLockView];
 }
 
@@ -86,12 +88,21 @@
             if (self.isSwitching){
                 self.mySwitch.on = NO;
                 [self.button1 setTitle:@"密码解锁" forState:UIControlStateNormal];
+                [self buttonAction:self.button];
             }
         } else if(state == ZBAuthIDStateUserCancel) {//被用户取消
             self.logLab.text = @"被用户取消";
             if (self.isSwitching){
                 self.mySwitch.on = NO;
                 [self.button1 setTitle:@"密码解锁" forState:UIControlStateNormal];
+                [self buttonAction:self.button];
+            }
+        } else if (state == ZBAuthIDStateTouchIDLockout){//被锁定(连续多次验证TouchID/FaceID失败,系统需要用户手动输入密码)
+            self.logLab.text = @"连续多次验证失败,被锁定,系统需要用户手动输入密码";
+            if (self.isSwitching){
+                self.mySwitch.on = NO;
+                [self.button1 setTitle:@"密码解锁" forState:UIControlStateNormal];
+                [self buttonAction:self.button];
             }
         } else if (state == ZBAuthIDStateSuccess) { // TouchID/FaceID验证成功
             NSLog(@"验证成功");

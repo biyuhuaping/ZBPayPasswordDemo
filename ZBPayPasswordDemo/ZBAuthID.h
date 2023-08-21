@@ -44,6 +44,9 @@ typedef void (^ZBAuthIDStateBlock)(ZBAuthIDState state, NSError *error);
 
 + (instancetype)sharedInstance;
 
+/// 检测系统是否开启生物解锁权限
+- (BOOL)isOpenAuthentication;
+
 /// 使用canEvaluatePolicy 判断设备支持生物解锁类型
 /// @return biometryType
 - (NSInteger)checkBiometryType;
